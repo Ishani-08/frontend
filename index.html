@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Web Development Project </title>
+<link rel="stylesheet" type="text/css" media="screen" href="debug.css">
+</head>
+<body>
+<style>
+body {
+  margin:0px;
+  background-image: url('back3.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%
+}
+button {
+  background-color: #d84315;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+
+<center>
+<img src="img2.png" alt="introductory image" height="400px" width="500px">
+<h1> Please fill the following form </h1></center>
+<script>
+function submitted()
+{
+   var elements = document.forms[0].elements;
+
+	for(var i = 0; i < elements.length; i++)
+	{
+		if(elements[i].value.length ==0 || elements[i].value.length == "" || elements[i].value.length == null)
+		{
+			alert("Response couldn't be submitted. Please fill the form!");
+                        break;
+		}
+                else
+                { 
+                alert("You have submitted your response!");	
+                break;
+	        }
+       }
+}
+
+</script>
+<form>
+<center>
+<label type="text"> Name </label>
+<input type="text" class="form-control" placeholder="Enter Name" required><br>
+<label type="text"> Email id </label>
+<input type="text" class="form-control"placeholder="Enter email" required><br>
+<label type="text"> Name of Institution </label>
+<input type="text" class="form-control"placeholder="Enter Name of Institution" required><br>
+<label type="text"> Registration Number </label>
+<input type="text" class="form-control"placeholder="Enter Reg. No." required><br>
+<label type="text"> Date of Birth </label>
+<input type="text" class="form-control" placeholder="DD/MM/YYYY" required><br>
+<label type="text"> Branch </label>
+<input type="text" class="form-control"placeholder="Enter branch" required><br>
+<label type="text"> Password </label>
+<input type="password" class="form-control"placeholder="Enter password" required> <br>
+<h3> Choose Your Gender </h3>
+<label type="text"> Male </label>
+<input type="radio" name="gender" required><br>
+<label type="text"> Female </label>
+<input type="radio" name="gender" required><br>
+<label type="text"> Other </label>
+<input type="radio" name="gender" required><br>
+<h3> Choose year of graduation </h3>
+<label type="text"> 2022 </label>
+<input type="radio" name="year" required> <br>
+<label type="text"> 2023 </label>
+<input type="radio" name="year" required> <br>
+<label type="text"> 2024 </label>
+<input type="radio" name="year" required> <br>
+<label type="text"> 2025 </label>
+<input type="radio" name="year" required><br>
+<button type="reset"> Reset </button>
+<button onclick="submitted()" > Submit </button>
+</center>
+</form>
+
+<hr>
+
+<script>
+function guessNumber()
+{
+const randomno = Math.floor(Math.random()*10)+1;
+
+//Taking input from user
+let number=parseInt(prompt("Guess a number from 1 to 10"));
+
+while(number!==randomno)
+{
+if(confirm("This is not the correct number! Do you want to continue?"))
+{
+number=parseInt(prompt("Guess a number from 1 to 10"));
+}
+else
+{
+return;
+}
+}
+if(number==randomno)
+{
+alert("You have guessed the correct number!");
+}
+}
+</script>
+<center>
+<h1><I><marquee><p style="color:darkblue;"> Want to play a quick game? </p></I></marquee></h2>
+<h1> Guess the Number Game <h1>
+<button onclick="guessNumber()">Click here</button>
+</center>
+<br>
+<center>
+</style>
+<img src="thankyou.gif"  alt="thank you">
+</center>    
+</style>
+
+</body>
+</html>
